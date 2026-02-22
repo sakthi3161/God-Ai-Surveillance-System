@@ -21,7 +21,7 @@
 Clone this respositor using the command 
 
 ```sh
-git clone https://github.com/neerajram30/God-s-Eye.git
+git clone https://github.com/sakthi3161/God-Ai-Surveillance-System
 
 ```
 
