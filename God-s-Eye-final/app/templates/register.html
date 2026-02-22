@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration portal</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column">        
+            <form method="post" action="/register" enctype="multipart/form-data">
+                <dl>
+
+        <p>
+            <input type="text" name="police_id" class="form-control" placeholder="Police id" autocomplete="off" required>
+            <input type="text" name="p_name" class="form-control" placeholder="Full name" required>
+            <input type="text" name="station" class="form-control" placeholder="Station" required>
+            <input type="text" name="post" class="form-control" placeholder="Post" required>
+            <input type="text" name="mobile" class="form-control" placeholder="Mobile" required>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+
+
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Submit" class="btn btn-info">
+    </p>
+</form>
+</div>
+
+</div>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Police registration portal</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style2.css') }}" >  
+  
+</head>
+<body class="life">  
+    
+<div class="login-box">
+
+    <h1>Police Registration</h1>
+    <form action="/register" method="post">
+
+        
+            
+            
+        <div class="text-box">
+    
+            <input type="text" name="police_id" class="form-control" placeholder="Police id" required>
+    </div>
+    
+     <div class="text-box">
+        
+        <input type="text" name="p_name" class="form-control" placeholder="Full name" required>
+    </div>
+    
+   
+    
+   
+    
+    <div class="text-box">
+        <input type="text" name="station" class="form-control" placeholder="Station" required>
+    </div>
+    <div class="text-box">
+        <input type="text" name="post" class="form-control" placeholder="Post" required>
+    </div>
+    <div class="text-box">
+        <input type="text" name="mobile" class="form-control" placeholder="Mobile" pattern="[7-9]{1}[0-9]{9}" required>
+    </div>
+
+    <div class="text-box">
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+    </div>
+    <input class="btn" type="submit" value="Sign up" name="sub">
+    </form>
+</div>
+
+</body>
+</html>

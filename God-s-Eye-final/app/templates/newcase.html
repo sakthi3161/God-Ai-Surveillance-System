@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Upload and display image using Python Flask and insert to PostgreSQL</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<p><h1 align="center">Upload and display image using Python Flask and insert to PostgreSQL</h1></p>
+<div class="container">
+<div class="row">
+    <h2>Select a file to upload</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    {% endif %}
+    <form method="post" action="/newcase" enctype="multipart/form-data">
+        <dl>
+
+            <p>
+                <input type="text" name="m_name" class="form-control" placeholder="name">
+                <input type="text" name="location" class="form-control" placeholder="location">
+                <input type="text" name="mobile" class="form-control" placeholder="mobile">
+                <input type="text" name="age" class="form-control" placeholder="age">
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-info">
+        </p>
+    </form>
+</div>
+</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Case Registration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style2.css') }}">  
+  
+</head>
+<body class="life">  
+<div class="login-box">
+    <h1>Register Case</h1>
+    <form action="/newcase" method="post" enctype="multipart/form-data">
+        
+        <div class="text-box">
+            <input type="text" name="m_name" placeholder="Full name" required>
+    </div>
+    
+    <div class="text-box">
+        <input type="text" name="location" placeholder="Location" required>
+    </div>
+
+    <div class="text-box">
+        <input type="text" name="mobile" placeholder="Mobile" pattern="[7-9]{1}[0-9]{9}" required>
+    </div>
+
+    <div class="text-box">
+        <input type="text" name="age" placeholder="Age" required>
+    </div>
+    
+    <div class="pic">
+   <input  type="file" name="file" accept="image/*" onchange="loadFile(event)" class="form-control" required id="br">
+<img id="output"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>
+  </div>
+<div>
+
+    <input class="btn" type="submit" value="Register">
+
+    </form>
+</div>
+</body>
+</html>

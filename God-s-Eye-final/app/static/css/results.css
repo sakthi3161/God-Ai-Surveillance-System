@@ -1,0 +1,46 @@
+body{
+    background-color: #060227;
+    color: white;
+
+}
+.p-title p{
+    color: white;
+    margin-left: 25%;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+#logout{
+    color: white;
+    text-decoration: none;
+}
+.resultcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+
+}
+
+.personal-details{
+    padding-left: 5%;
+}
+.details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+.spotedimage img{
+    width: 150px;
+    padding: 5%;
+}
+
+nav{
+    background-color: #00021d;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -5px;
+}

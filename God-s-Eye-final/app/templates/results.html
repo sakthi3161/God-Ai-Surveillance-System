@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href= "{{ url_for('static',filename='css/results.css') }}">
+    <title>Results</title>
+</head>
+<body>
+    <div class="container">
+
+        <nav class="police-nav">
+        <div class="p-title">
+            <p>God's eye</p>
+        </div>
+        <div class="nav-links">           
+            <a href="/logout" id="logout">Logout</a>
+        </div>
+    </nav>
+    <table class="details"> 
+        <thead> 
+     
+     </thead> 
+     <tbody class="resultbody"> 
+         
+         {% for row in value %}
+         {% for i in row[1] %}
+         {% for j in row[2] %}
+         {% for k in row[3] %}
+         {% for l in row[4] %}
+         <tr>
+             <td class="spotedimage" ><img src="{{url_for('static',filename = 'screenshots/')}}{{i}}"/></td>
+             
+             <td class="personal-details">
+                <p>Name: {{k}}</p> 
+                <p>Location : {{j}}</p>
+                <p>Date : {{l}}</p>
+             </td>
+
+         </tr>
+         {% endfor %}
+         {% endfor %}
+
+         {% endfor %}
+         {% endfor %}
+        
+         {% endfor %}
+       
+
+     </tbody> 
+ </table> 
+</div>
+</body>
+</html>
